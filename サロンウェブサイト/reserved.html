@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang=ja dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>salon website</title>
+    <meta name="description" content="心身ともに落ち着かせてくれるサロン予約">
+
+<!-- css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="home5">
+    <header class="page-header wrapper">
+      <h1><a href="index.html"><img class="logo" src="images/logo.svg" alt="お店の名前"></a></h1>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="index.html#menu">MENU</a></li>
+          <li><a href="index.html#about">ABOUT</a></li>
+          <li><a href="index.html#reserved">RESERVED</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--1page-->
+    <img class="reserved" src="images/reserved.jpg" >
+
+    <!--2page-->
+    <h1 class="nyuryoku">入力フォーム</h1>
+    <form action="confirm.php" method="post">
+
+      <div class="cp_iptxt">
+	       <input class="ef" type="text" placeholder="">
+	        <label>お名前</label>
+	         <span class="focus_line"></span>
+      </div>
+      <br>
+      <div class="cp_iptxt">
+	       <input class="ef" type="text" placeholder="">
+	        <label>ナマエ</label>
+	         <span class="focus_line"></span>
+      </div>
+      <br>
+      <div class="cp_iptxt">
+	       <input class="ef" type="number" placeholder="">
+	        <label>電話番号</label>
+	         <span class="focus_line"></span>
+      </div>
+      <br>
+      <div class="cp_iptxt">
+	       <input class="ef" type="email" placeholder="">
+	        <label>メールアドレス</label>
+	         <span class="focus_line"></span>
+      </div>
+      <br>
+      <div class="cp_iptxt">
+	       <input class="ef" type="email" placeholder="">
+	        <label>確認用メールアドレス</label>
+	         <span class="focus_line"></span>
+      </div>
+      <br>
+      <div class="cp_ipselect">
+        <select class="cp_sl06" required>
+          <option value="" hidden disabled selected></option>
+          <option value="A">メニューA</option>
+          <option value="B">メニューB</option>
+          <option value="C">メニューC</option>
+          <option value="D">メニューD</option>
+        </select>
+        <span class="cp_sl06_highlight"></span>
+        <span class="cp_sl06_selectbar"></span>
+        <label class="cp_sl06_selectlabel">メニューの選択</label>
+      </div>
+    </form>
+
+
+
+
+  </body>
+</html>

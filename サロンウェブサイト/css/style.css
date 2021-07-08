@@ -1,0 +1,423 @@
+@charset "UTF-8"
+/*-------------共通部分-----------------*/
+html{
+  font-size: 100%;
+}
+body{
+  font-family: 'Arapey', serif;
+  color: #e0ded1;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+}
+
+/*ページ設定*/
+.area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: center;
+}
+
+/*header*/
+.logo{
+  width: 210px;
+  margin-top: 14px;
+  color: #EAD1A3;
+}
+
+.main-nav{
+  display: flex;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  list-style: none;
+}
+.main-nav li{
+  margin-right: 36px;
+  margin-top: 10px;
+}
+.main-nav a{
+  color: #EAD1A3;
+}
+.main-nav a:hover {
+  color: #26AFEB;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper{
+  max-width: 2000px;
+  margin: 20px 3%;
+  padding: 0 4%;
+}
+
+/*home*/
+.home-content{
+  text-align: left;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.relax{
+  font-size: 50px;
+  margin: 10px 0 150px;
+  margin-left: 15%;
+  color: #EAD1A3;
+}
+.page-title {
+  color: #EAD1A3;
+  font-size: 120px;
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: none;
+  margin-left: 10%;
+}
+#home {
+  background-image: url(../images/relax-palm-trees.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+.button {
+  margin-left: 45%;
+  margin-bottom: 5%;
+  position: relative;
+  display: inline-block;
+  padding: .5em 4em;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  transition: all .2s;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  z-index: 2;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 2px solid transparent;
+  box-sizing: content-box;
+}
+.button::before {
+  top: -2px;
+  left: -2px;
+}
+.button::after {
+  bottom: -2px;
+  right: -2px;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover::before,
+.button:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.button:hover::before {
+  border-bottom-color: #F5F455;
+  border-left-color: #F5F455;
+  transition: height .3s, width .3s .3s;
+}
+.button:hover::after {
+  border-top-color: #F5F455;
+  border-right-color: #F5F455;
+  transition: height .3s, width .3s .3s;
+}
+
+/*２ページ目*/
+#home2{
+  background-color: #45330C;
+  min-height: 100vh;
+}
+.concept{
+  font-size: 90px;
+  margin-left: 10%;
+}
+.p-concept{
+  margin-top: 15%;
+  margin-left: 20%;
+}
+.massage{
+  margin-right: 5%;
+  height: 424px;
+  width: 611px;
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 0 86%);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.flex>p {
+  width: 49%;
+}
+
+/*3ページ目*/
+#home3{
+  background-image: url(../images/wood-flor.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+#menu {
+  font-size: 90px;
+  margin-left: 10%;
+}
+.flex2{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 120px 0px 120px;
+}
+.square{
+  width: 350px;
+  height: 400px;
+  background: #fff;
+}
+.flex3{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -350px;
+  padding: 0px 145px 0px 145px;
+}
+.square2{
+  width: 300px;
+  height: 300px;
+  background: #000;
+}
+.pin1{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20%;
+}
+.pin2 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left:50%;
+}
+.pin3{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 80%;
+}
+
+/*4ページ目*/
+#home4 {
+  background-color: #000;
+  min-height: 100vh;
+}
+#about {
+  font-size: 90px;
+  margin-left: 10%;
+}
+.flex4 {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 250px 0px 250px;
+}
+.flex5 {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 120px 0px 120px;
+}
+.square3{
+  width: 350px;
+  height: 400px;
+  background: #fff;
+}
+
+
+/*予約ページ*/
+#home5{
+  background-color: #332929;
+  min-height: 100vh;
+}
+
+.reserved{
+  margin-left: 10%;
+  width: 1200px;
+  height: 650px;
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 0 86%);
+}
+
+/*入力フォーム*/
+.nyuryoku{
+  font-size: 80px;
+  margin-left: 10%;
+  margin-bottom: 40px;
+}
+.cp_iptxt {
+	position: relative;
+	width: 50%;
+	margin: 10px 20%;
+}
+.cp_iptxt input[type='text'] {
+	font: 35px/50px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	letter-spacing: 2px;
+	padding-left: 4em;
+  color: #cfaa2a;
+}
+.cp_iptxt input[type='number'] {
+	font: 35px/50px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	letter-spacing: 2px;
+	padding-left: 4em;
+  color: #cfaa2a;
+}
+.cp_iptxt input[type='email'] {
+	font: 35px/50px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	letter-spacing: 2px;
+	padding-left: 4em;
+  color: #cfaa2a;
+}
+.cp_iptxt input[type='text']:focus {
+	outline: none;
+}
+.ef {
+	padding: 4px 0;
+	border: 0;
+	border-bottom: 1px solid #728288;
+	background-color: transparent;
+}
+.ef ~ .focus_line {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	transition: 0.4s;
+	background-color: #bb883b;
+}
+.ef ~ .focus_line {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	transition: 0.4s;
+	background-color: #bb883b;
+}
+.ef:focus ~ .focus_line,
+.cp_iptxt.ef ~ .focus_line {
+	left: 0;
+	width: 100%;
+	transition: 0.4s;
+}
+.ef ~ label {
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 100%;
+	transition: 0.3s;
+	letter-spacing: 0.5px;
+	color: #ea9235;
+}
+.ef:focus ~ label, .cp_iptxt.ef ~ label {
+	font-size: 12px;
+	top: -16px;
+	transition: 0.3s;
+	color: #bb883b;
+}
+/*選択select*/
+.cp_ipselect {
+	position: relative;
+	width: 51%;
+	margin: 2em 18em;
+	text-align: center;
+}
+.cp_sl06 {
+	position: relative;
+	font-family: inherit;
+	background-color: transparent;
+  color: #cfaa2a;
+	width: 50%;
+	padding: 10px 10px 10px 0;
+	font-size: 25px;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0, 0.3);
+}
+.cp_sl06:focus {
+	outline: none;
+	border-bottom: 1px solid rgba(0,0,0, 0);
+}
+.cp_ipselect .cp_sl06 {
+	appearance: none;
+	-webkit-appearance:none
+}
+.cp_ipselect select::-ms-expand {
+	display: none;
+}
+.cp_ipselect:after {
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #bb883b;
+	pointer-events: none;
+}
+.cp_sl06_selectlabel {
+	color: #ea9235;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: 10px;
+	transition: 0.2s ease all;
+}
+.cp_sl06:focus ~ .cp_sl06_selectlabel, .cp_sl06:valid ~ .cp_sl06_selectlabel {
+	color: #ea9235;
+	top: -20px;
+	transition: 0.2s ease all;
+	font-size: 14px;
+}
+.cp_sl06_selectbar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.cp_sl06_selectbar:before, .cp_sl06_selectbar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #bb883b;;
+	transition: 0.2s ease all;
+}
+.cp_sl06_selectbar:before {
+	left: 50%;
+}
+.cp_sl06_selectbar:after {
+	right: 50%;
+}
+.cp_sl06:focus ~ .cp_sl06_selectbar:before, .cp_sl06:focus ~ .cp_sl06_selectbar:after {
+	width: 50%;
+}
+.cp_sl06_highlight {
+	position: absolute;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
